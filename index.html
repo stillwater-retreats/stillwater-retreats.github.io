@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Your Home Away From Home</title>
 
-     <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <style>
         * {
             margin: 0;
@@ -80,7 +80,7 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         nav a {
@@ -231,6 +231,98 @@
             margin-bottom: 0.5rem;
         }
 
+        /* Transit Cards */
+        .transit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .transit-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .transit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .transit-header {
+            background: linear-gradient(135deg, #c7b8a9, #b5a693);
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .transit-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .transit-body {
+            padding: 1.5rem;
+        }
+
+        .station-list {
+            margin-top: 1rem;
+            color: #666;
+        }
+
+        .station-list li {
+            margin-bottom: 0.5rem;
+            list-style: none;
+        }
+
+        .station-list li::before {
+            content: "•";
+            color: #9a8a7a;
+            margin-right: 0.5rem;
+        }
+
+        /* Places Cards */
+        .places-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .place-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .place-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .place-header {
+            background: linear-gradient(135deg, #b5a693, #9a8a7a);
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .place-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .place-body {
+            padding: 1.5rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
         /* Restaurants */
         .restaurant-grid {
             display: grid;
@@ -273,7 +365,7 @@
             padding: 1.5rem;
         }
 
-        .restaurant-distance {
+        .restaurant-address {
             color: #9a8a7a;
             font-weight: bold;
             margin-bottom: 0.5rem;
@@ -367,6 +459,8 @@
             <li><a href="#property-info">Property Info</a></li>
             <li><a href="#guides">Guides</a></li>
             <li><a href="#house-rules">House Rules</a></li>
+            <li><a href="#getting-around">Getting Around</a></li>
+            <li><a href="#places-to-see">Places to See</a></li>
             <li><a href="#restaurants">Restaurants</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -492,6 +586,84 @@
         </div>
     </section>
 
+    <section id="getting-around">
+        <div class="container">
+            <h2>Getting Around</h2>
+            <div class="transit-grid">
+                <div class="transit-card">
+                    <div class="transit-header">
+                        <div class="transit-name">🚆 Trinity Rail Express</div>
+                    </div>
+                    <div class="transit-body">
+                        <p>Regional train closest to the house. Service between Fort Worth and Dallas with stops in between including shuttles to and from DFW airport.</p>
+                    </div>
+                </div>
+                <div class="transit-card">
+                    <div class="transit-header">
+                        <div class="transit-name">🚌 The DART</div>
+                    </div>
+                    <div class="transit-body">
+                        <p>Local transit service for Dallas area with bus and light rail service.</p>
+                    </div>
+                </div>
+                <div class="transit-card">
+                    <div class="transit-header">
+                        <div class="transit-name">🚍 The T</div>
+                    </div>
+                    <div class="transit-body">
+                        <p>Local transit service in Fort Worth. City bus and train service to DFW airport.</p>
+                        <ul class="station-list">
+                            <li>North Richland Hills/Smithfield station, 2.6mi</li>
+                            <li>North Richland Hills/Iron Horse station, 3.8mi</li>
+                            <li>Richland Hill Station, 7.9mi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="places-to-see">
+        <div class="container">
+            <h2>Places to See</h2>
+            <div class="places-grid">
+                <div class="place-card">
+                    <div class="place-header">
+                        <div class="place-name">🤠 Fort Worth Stockyards</div>
+                    </div>
+                    <div class="place-body">
+                        <p>Taste of the Wild West. Experience bull riding, horse back riding, daily longhorn cattle walk, saloon sipping, maze races, old time photos and live music, two stepping, shopping, make a customized hat at Flea Style. Rodeo most Friday and Saturday nights. (Tickets needed) Come hungry and thirsty there is a bunch of food and drink options!</p>
+                    </div>
+                </div>
+                <div class="place-card">
+                    <div class="place-header">
+                        <div class="place-name">🎢 Six Flags Over Texas</div>
+                    </div>
+                    <div class="place-body">
+                        <p>A 212 acre amusement park. Filled with roller coasters, water slides, festivals, food and games! There is family rides, thriller rides and live entertainment!</p>
+                    </div>
+                </div>
+                <div class="place-card">
+                    <div class="place-header">
+                        <div class="place-name">🏊 NRH20 Family Water Park</div>
+                    </div>
+                    <div class="place-body">
+                        <p>Have some fun in the sun. This place never disappoints. Relax in the lazy river, wade into the ocean pool, splash around with the littles in the tadpole swimming hole, along with some tube and waterslides for all ages! Seasonal hours.</p>
+                        <p style="margin-top: 1rem; font-style: italic;">(Indoor water park option for off season: Epic Waters in Grand Prairie)</p>
+                    </div>
+                </div>
+                <div class="place-card">
+                    <div class="place-header">
+                        <div class="place-name">🎬 Rooftop Cinema Club</div>
+                    </div>
+                    <div class="place-body">
+                        <p>Enjoy a unique movie experience with a rooftop outdoor movie night as well as lawn games. This is a seasonal event and kids are welcome until 4:30. Eat movie snacks, popcorn and candies as well as bar food! Tickets are needed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="restaurants">
         <div class="container">
             <h2>Restaurant Recommendations</h2>
@@ -502,7 +674,7 @@
                         <div class="restaurant-type">Latin American</div>
                     </div>
                     <div class="restaurant-body">
-                        <div class="restaurant-distance">8407 Boulevard 26, North Richland Hills, TX 76180</div>
+                        <div class="restaurant-address">8407 Boulevard 26, North Richland Hills, TX 76180</div>
                         <p>(817) 576-4333</p>
                     </div>
                 </div>
@@ -512,7 +684,7 @@
                         <div class="restaurant-type">Italian Cuisine</div>
                     </div>
                     <div class="restaurant-body">
-                        <div class="restaurant-distance">5249 Davis Blvd, North Richland Hills, TX 76180</div>
+                        <div class="restaurant-address">5249 Davis Blvd, North Richland Hills, TX 76180</div>
                         <p>(817) 498-6446 / (817) 788-9444</p>
                     </div>
                 </div>
@@ -522,7 +694,7 @@
                         <div class="restaurant-type">BBQ & American</div>
                     </div>
                     <div class="restaurant-body">
-                        <div class="restaurant-distance">3201 Riverfront Dr, Fort Worth, TX 76107</div>
+                        <div class="restaurant-address">3201 Riverfront Dr, Fort Worth, TX 76107</div>
                         <p>(817) 877-4545</p>
                     </div>
                 </div>
@@ -532,8 +704,18 @@
                         <div class="restaurant-type">Breakfast & Brunch</div>
                     </div>
                     <div class="restaurant-body">
-                        <div class="restaurant-distance">6021 Walker Blvd, North Richland Hills, TX 76180</div>
+                        <div class="restaurant-address">6021 Walker Blvd, North Richland Hills, TX 76180</div>
                         <p>(817) 485-1818</p>
+                    </div>
+                </div>
+                <div class="restaurant-card">
+                    <div class="restaurant-header">
+                        <div class="restaurant-name">Stop-N-Go Gyros</div>
+                        <div class="restaurant-type">Greek & Mediterranean</div>
+                    </div>
+                    <div class="restaurant-body">
+                        <div class="restaurant-address">5142 Rufe Snow Dr, North Richland Hills, TX 76180</div>
+                        <p>(817) 656-0044</p>
                     </div>
                 </div>
                 <div class="restaurant-card">
@@ -542,7 +724,7 @@
                         <div class="restaurant-type">Modern American</div>
                     </div>
                     <div class="restaurant-body">
-                        <div class="restaurant-distance">4400 White Settlement Road, Fort Worth, TX 76110</div>
+                        <div class="restaurant-address">4400 White Settlement Road, Fort Worth, TX 76110</div>
                         <p>(817) 732-9535</p>
                     </div>
                 </div>
@@ -552,8 +734,28 @@
                         <div class="restaurant-type">Bar & Grill</div>
                     </div>
                     <div class="restaurant-body">
-                        <div class="restaurant-distance">122 E Exchange Ave Ste 340, Fort Worth, TX 76164</div>
+                        <div class="restaurant-address">122 E Exchange Ave Ste 340, Fort Worth, TX 76164</div>
                         <p>(817) 576-4333</p>
+                    </div>
+                </div>
+                <div class="restaurant-card">
+                    <div class="restaurant-header">
+                        <div class="restaurant-name">Saaya Lounge</div>
+                        <div class="restaurant-type">Modern Dining & Bar</div>
+                    </div>
+                    <div class="restaurant-body">
+                        <div class="restaurant-address">2511 Swiss Ave Ste 110, Dallas, TX 75204</div>
+                        <p>(489) 480-6254</p>
+                    </div>
+                </div>
+                <div class="restaurant-card">
+                    <div class="restaurant-header">
+                        <div class="restaurant-name">Birdies Social Club</div>
+                        <div class="restaurant-type">Social Club & Bar</div>
+                    </div>
+                    <div class="restaurant-body">
+                        <div class="restaurant-address">2736 W 6th Street, Fort Worth, TX 76107</div>
+                        <p>(817) 888-8914</p>
                     </div>
                 </div>
             </div>
@@ -628,7 +830,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.card, .info-item, .rule-item, .restaurant-card').forEach(el => {
+        document.querySelectorAll('.card, .info-item, .rule-item, .restaurant-card, .transit-card, .place-card').forEach(el => {
             observer.observe(el);
         });
     </script>
